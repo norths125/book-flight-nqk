@@ -52,6 +52,4 @@ export class FlightComponent implements OnInit {
     console.log(f)
 
   }
-
-
 }
