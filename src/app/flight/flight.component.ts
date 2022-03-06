@@ -41,7 +41,9 @@ export class FlightComponent implements OnInit {
   }
 
   onSubmit(f:Flight): void{
-    if(f.from == f.to) return alert('จุดเริ่มต้นและจุดปลายทางต้องไม่เหมือนกัน!')
+    if(f.from == "null") return alert('กรุณาเลือกจุดหมาย!')
+    else if(f.to == "null") return alert('กรุณาเลือกปลายทาง!')
+    else if(f.from == f.to) return alert('จุดเริ่มต้นและจุดปลายทางต้องไม่เหมือนกัน!')
     const yearDeparture = f.departure.getFullYear() + 543
     const yearArrival = f.arrival.getFullYear() + 543
     f.departure = new Date((f.departure.getMonth() + 1) + '/' + f.departure.getDate() + "/" + yearDeparture)
