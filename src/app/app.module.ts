@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialExampleModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MAT_DATE_LOCALE} from '@angular/material/core';
 
 
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { FlightComponent } from './flight/flight.component';
     
 
   ],
-  providers: [],
+
+    providers: [{ provide: MAT_DATE_LOCALE, useValue: "th-TH" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
