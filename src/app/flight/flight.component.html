@@ -54,8 +54,9 @@
         <div class="col-md-4 mt-3">
           <label>
             <b style="color:white">Departure</b>
-          </label> <span style="color: red" *ngIf="flightform.get('departure')?.errors?.['required']"> *required</span>
+          </label> <span style="color: red" *ngIf="flightform.get('departure')?.errors?.['required']"> *required</span><br>
           <div>
+
             <mat-form-field appearance="fill">
               <input matInput [matDatepicker]="picker1" formControlName="departure" [min]="startDate">
               <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
@@ -67,9 +68,10 @@
         <div class="col-md-4 mt-3">
           <label>
             <b style="color:white">Arrival</b>
-          </label> <span style="color: red" *ngIf="flightform.get('arrival')?.errors?.['required']"> *required</span>
+          </label> <span style="color: red" *ngIf="flightform.get('arrival')?.errors?.['required']"> *required</span><br>
           <div>
             <mat-form-field appearance="fill">
+              
               <input matInput [matDatepicker]="picker2" formControlName="arrival" [min]="flightform.value.departure">
               <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
               <mat-datepicker #picker2></mat-datepicker>
